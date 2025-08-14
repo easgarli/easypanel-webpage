@@ -324,4 +324,4 @@ def _render_logs_view(table_name, page_title):
     """, log_content=log_content, page_date=page_date, pagination_dates=pagination_dates, page_title=page_title)
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8082)
+    app.run(host='0.0.0.0', port=8080)
