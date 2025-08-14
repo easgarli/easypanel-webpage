@@ -123,7 +123,7 @@ def require_login(access_type):
         return wrapper
     return decorator
 
-@app.route('/tezpul-logs')
+@app.route('/chat-logs/tezpul-logs')
 @require_login('tezpul')
 def view_tezpul_logs():
     return _render_logs_view(
@@ -131,7 +131,7 @@ def view_tezpul_logs():
         page_title="Tezpul Chat Logs"
     )
 
-@app.route('/anydoc-logs')
+@app.route('/chat-logs/anydoc-logs')
 @require_login('anydoc')
 def view_anydoc_logs():
     return _render_logs_view(
