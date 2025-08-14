@@ -32,7 +32,7 @@ def get_db_connection():
     )
     return conn
 
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/chat-logs', methods=['GET', 'POST'])
 def login():
     # If already logged in, redirect based on access
     if 'username' in session:
