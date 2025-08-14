@@ -47,6 +47,7 @@ def login():
         password = request.form.get("password", "")
         user = USERS.get(username)
         if user and user["password"] == password:
+            session.clear()
             session['username'] = username
             if user["access"] == "tezpul":
                 return redirect(url_for("view_tezpul_logs"))
@@ -97,11 +98,6 @@ def login():
                     <input type="password" id="password" name="password" required>
                     <input type="submit" value="Login">
                 </form>
-                <p><strong>Demo Users:</strong></p>
-                <ul>
-                    <li><b>tezpul_user</b> : tezpulpass (Tezpul logs)</li>
-                    <li><b>anydoc_user</b> : anydocpass (Anydoc logs)</li>
-                </ul>
             </div>
         </body>
         </html>
