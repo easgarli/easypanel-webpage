@@ -103,7 +103,7 @@ def login():
         </html>
     """, error=error)
 
-@app.route('/logout')
+@app.route('/chat-logs/logout')
 def logout():
     session.pop('username', None)
     return redirect(url_for('login'))
